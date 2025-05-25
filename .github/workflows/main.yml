@@ -10,9 +10,14 @@ on:
 jobs:
   hello-world:
     runs-on: ubuntu-latest
-    
+
     steps:
-      - name: youremailaddresshere
+      - name: Set Git user email
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "your-email@example.com"
+
+      - name: Hello world
         run: echo "Hello, world!"
         
       - name: Display date
